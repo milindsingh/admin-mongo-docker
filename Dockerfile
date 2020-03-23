@@ -1,4 +1,4 @@
-FROM node:6
+FROM node:lts-alpine3.9
 LABEL maintainer="Milind Singh <milind7@live.com>"
 
 # Install pm2
