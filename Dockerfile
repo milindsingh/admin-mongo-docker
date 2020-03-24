@@ -17,7 +17,7 @@ RUN git clone https://github.com/mrvautin/adminMongo.git .
 RUN npm install
 
 # Expose ports
-EXPOSE 80 443 43554 1234
+EXPOSE 1234
 
 # Start pm2.json process file
-CMD ["pm2", "start", "/app/admin-mongo/app.js"]
+CMD ["pm2-runtime", "start", "/app/admin-mongo/app.js"]
