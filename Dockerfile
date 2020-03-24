@@ -7,7 +7,7 @@ RUN npm install pm2 -g
 # Install git
 RUN apk add --no-cache git
 
-RUN mkdir /app/admin-mongo
+RUN mkdir -p /app/admin-mongo
 
 WORKDIR "/app/admin-mongo"
 
@@ -17,7 +17,7 @@ RUN git clone https://github.com/mrvautin/adminMongo.git .
 RUN npm install
 
 # Expose ports
-EXPOSE 80 443 43554
+EXPOSE 80 443 43554 1234
 
 # Start pm2.json process file
 CMD ["pm2", "start", "/app/admin-mongo/app.js"]
